@@ -15,19 +15,19 @@
 
       var addListing = function (company) {
         $http.post(url, listing).success(function(){
-          $location.path('/admincompanies');
+          $location.path('/adminlistings');
         });
       };
 
       var deleteListing = function (id) {
         $http.delete(url + '/' + id).success(function(){
-          $location.path('/admincompanies')
+          $location.path('/adminlistings')
         });
       };
 
-      var editListing = function (company, id) {
-        $http.put(url + '/' + id, company).success(function(){
-          $location.path('/admincompanies');
+      var editListing = function (listing, id) {
+        $http.put(url + '/' + id, listing).success(function(){
+          $location.path('/adminlistings');
         });
       };
       return {

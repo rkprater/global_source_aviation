@@ -1,0 +1,49 @@
+
+
+<div class='container container-admin'>
+
+    <h3>Welcome {{adminCtrl.username}}</h3>
+
+  <div class="searchbox-wrapper">
+    <input ng-model="query" type="text" name="searchbox" placeholder="filter listings">
+    <a href="#/"><span class="fa-lg">
+      <i class="fa fa-home"></i>
+    </span>Home</a>
+    <a href="#/addlisting"><span class="fa-lg">
+      <i class="fa fa-plus"></i>
+    </span>Add Listing</a>
+  </div>
+
+  <table class ="listing-table table table-striped">
+    <thead>
+
+      <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Engines</th>
+        <th>Avionics</th>
+        <th>Additional Features</th>
+        <th>Maintenance</th>
+        <th>Interior</th>
+        <th>Exterior</th>
+        <th>View More / Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-item animate-repeat" ng-repeat="listing in adminCtrl.listings | orderBy: 'name'| filter:query as results">
+
+        <td class="logo"><img data-ng-src={{listing.logo}} /></td>
+        <td class="name">{{listing.name}}</td>
+        <td class="engines">{{listing.engines}}</td>
+        <td class="avionics">{{listing.avionics}}</td>
+        <td class="additionalfeatures">{{listing.additionalfeatures}}</td>
+        <td class="maintenance">{{listing.maintenance}}</td>
+        <td class="interior">{{listing.interior}}</td>
+        <td class="exterior">{{listing.exterior}}</td>
+        <td>
+          <a href="#/edit/{{listing._id}}">View More / Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
