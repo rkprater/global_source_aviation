@@ -13,7 +13,7 @@
         return $http.get(url + '/' + id);
       };
 
-      var addListing = function (company) {
+      var addListing = function (listing) {
         $http.post(url, listing).success(function(){
           $location.path('/adminlistings');
         });
