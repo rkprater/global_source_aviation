@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+
+  <link rel="stylesheet" href="assets/css/compiled.css">
+
+  <title>Global Source Avaiation</title>
+</head>
+<body ng-App="airplane">
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/#/">Global Source Avaiation</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/#/about">About <span class="sr-only">(current)</span></a></li>
+          <li><a href="/#/list">Listings</a></li>
+          <li><a href="/#/archives">Archives</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/#/admin">Admin</a>
+          </li>
+        </ul>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <div class="view-animate-container">
+    <ng-view class="view-animate">
+    <!--Angular app sits here-->
+    </ng-view>
+  </div>
+
+<!-- SCRIPTS -->
+<script src="assets/bower_components/lodash/dist/lodash.js"></script>
+<script src="assets/bower_components/angular/angular.js"></script>
+<script src="assets/bower_components/angular-route/angular-route.js"></script>
+<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+<script src="assets/bower_components/jquery/dist/jquery.js"></script>
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- MAIN APP SCRIPTS -->
+<script src="app.js"></script>
+<script src="controller.js"></script>
+
+<!-- ADMIN SCRIPTS -->
+<script src ="admin/admin.module.js"></script>
+<script src ="admin/admin.controller.js"></script>
+<script src ="admin/admin.service.js"></script>
+<script src ="login/login.module.js"></script>
+<script src ="login/login.controller.js"></script>
+<script src ="login/login.service.js"></script>
+
+<!-- FRONT SCRIPTS -->
+<script src="client/client.module.js"></script>
+<script src="client/client.controller.js"></script>
+<script src="client/client.service.js"></script>
+
+</body>
+</html>

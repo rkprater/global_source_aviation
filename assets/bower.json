@@ -1,0 +1,16 @@
+{
+  "name": "assets",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rkprater/global_source_aviation",
+  "authors": [
+    "rkprater <rkprater@icloud.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
